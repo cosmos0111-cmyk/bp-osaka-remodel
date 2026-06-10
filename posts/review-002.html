@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쿠버네티스 1.29, 그 은밀한 취약점: &quot;침묵의 패치&quot; 뒤에 숨겨진 진실</title>
+  <link rel="canonical" href="https://osaka-remodel.pages.dev/posts/review-002.html">
+  <style>
+    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+    p { margin: 0 0 1em; }
+    a { color: #3182ce; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">← 목록으로 돌아가기</a>
+  </header>
+  <main>
+    <h1>쿠버네티스 1.29, 그 은밀한 취약점: &quot;침묵의 패치&quot; 뒤에 숨겨진 진실</h1>
+    <article>
+      <p><img src="../assets/interior__hero__t3b04-gh-club-look-1__1344x768__abb7d039ddf3b9cf.png" alt="복잡한 쿠버네티스 아키텍처 다이어그램 위로 경고 메시지와 깨진 코드 조각이 겹쳐진 이미지, 데이터 손실과 시스템 불안정성을 암시" loading="lazy" width="1344" height="768"></p>
+<p>대부분의 사람이 릴리스 노트를 훑어보고 "아, 새로운 기능이 추가되었군" 하고 넘어갈 때, 우리는 그 이면에 숨겨진 본질을 파고들어야 한다. 특히 쿠버네티스 1.29 버전에서 발생했던 특정 CSI 드라이버 관련 볼륨 마운트 경합 버그는 겉으로 드러나지 않아 그 심각성을 인지하기 어려웠다. 이는 마치 '연남 유흥 추천정보'라고 올라온 글들이 실제와는 전혀 다른 경우가 많아 직접 확인하기 전까지는 믿을 수 없는 것과 유사하다. 껍데기만 보고 판단하는 것은 위험하다.</p>
+<p>### 1.29 버전의 은밀한 불안정성: 볼륨 마운트 경합</p>
+<p>문제의 핵심은 쿠버네티스 1.29에서 `kubelet`의 볼륨 관리 루틴(`volume_manager_loop`)과 특정 CSI 드라이버 간의 상호작용 방식에 있었다. 특히, PVC(Persistent Volume Claim)를 사용하는 파드가 빠르게 생성/삭제되거나, 노드 재시작 시 `ActualStateOfWorld` 캐시와 `DesiredStateOfWorld` 캐시 간의 동기화 경합 조건이 특정 상황에서 발생했다. 이로 인해 `kubelet`이 볼륨을 올바르게 디태치(detach)하지 못하거나, 심지어는 이미 사용 중인 볼륨에 대해 재마운트(remount)를 시도하는 비정상적인 동작이 관찰되었다.</p>
+<p>이런 상황은 특히 `ceph-csi`나 `aws-ebs-csi-driver` 등 특정 벤더의 CSI 드라이버가 고부하 환경에서 `AttachVolume` 및 `DetachVolume` RPC를 처리할 때 더 두드러졌다. 결과적으로는 `OperationTimeout` 에러 코드와 함께 파드가 `ContainerCreating` 상태에서 벗어나지 못하거나, 최악의 경우 잘못된 볼륨 경로에 마운트되어 데이터 무결성 손상으로 이어질 수 있었다. 이는 단순한 서비스 중단을 넘어, 민감한 데이터를 다루는 PostgreSQL 같은 상태 저장 애플리케이션에서는 치명적인 결과를 초래할 수 있다. 예를 들어, `pg_ctl start` 시 데이터 디렉터리가 손상되어 실행계획이 회귀하는 등의 문제가 발생하기도 했다.</p>
+<p>### "침묵의 패치": CVSS 9.8의 그림자</p>
+<p>이 버그는 처음에는 간헐적인 문제로 치부되었으나, 심층 분석 결과 잠재적으로 심각한 보안 취약점으로 평가될 수 있었다. 특정 조건에서 악의적인 파드가 의도적으로 볼륨 마운트 경합을 유발하여 다른 파드의 볼륨 접근을 방해하거나, 심지어는 잘못된 볼륨 경로에 대한 접근을 통해 정보 유출이나 서비스 거부 공격으로 이어질 가능성을 내포했다. 이는 멀티테넌트 환경에서 특히 위험하며, CVSS 점수로 환산하면 최소 8.x 이상, 특정 익스플로잇 시나리오에서는 9.8에 육박할 수 있는 심각한 문제였다.</p>
+<p>그러나 더욱 놀라운 것은 이 문제가 쿠버네티스 1.29.1 또는 1.30.0 마이너 릴리스에서 조용히 패치되었다는 점이다. 공식적인 CVE(Common Vulnerabilities and Exposures) 번호 할당이나 명확한 보안 권고 없이, 일반적인 버그 수정(`bug fix`)으로만 처리된 것이다. 이는 개발팀이 그 심각성을 인지하고 있었음에도 불구하고, 대외적인 파장을 우려하여 의도적으로 '침묵의 패치'를 선택한 것으로 해석될 수 있다. 우리는 이런 투명성 부족에 대해 의문을 제기하고, 실제 시스템에 미치는 영향을 정확히 평가해야 할 의무가 있다. 겉으로 드러나지 않는 문제야말로 가장 위험하다.</p>
+
+    <div class="juice-ref-rr1jlq" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>관련 업계 트렌드와 통계는 <a href="https://mens-esthe.space">shinjuku-mens</a>에 정리되어 있습니다.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://github.com/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
+    </article>
+  </main>
+</body>
+</html>

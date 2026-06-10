@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title><![CDATA[유흥]]></title>
+  <link>https://cosmos0111-cmyk.github.io/bp-osaka-remodel</link>
+  <description><![CDATA[유흥 - 연남 유흥 추천정보 관련 최신 소식 및 가이드]]></description>
+  <language>ko</language>
+  <pubDate>Wed, 10 Jun 2026 02:52:57 GMT</pubDate>
+  <lastBuildDate>Wed, 10 Jun 2026 02:52:57 GMT</lastBuildDate>
+  <atom:link href="https://cosmos0111-cmyk.github.io/bp-osaka-remodel/feed.xml" rel="self" type="application/rss+xml" />
+  
+    <item>
+      <title><![CDATA[창작한 제목]]></title>
+      <link>https://cosmos0111-cmyk.github.io/bp-osaka-remodel/posts/field_note-001-17nqs8z.html</link>
+      <guid isPermaLink="true">https://cosmos0111-cmyk.github.io/bp-osaka-remodel/posts/field_note-001-17nqs8z.html</guid>
+      <description><![CDATA[ML 엔지니어의 눈을 통해, Q4_K_M 양자화 미스 픽uture로 인한 Instruction Following 저하 아, 진짜... 프로덕션 배포 후 3개월 만에 발견된 silent regression 디버깅은 ML 엔지니어로서 얼마나 힘든지! ## 소제목- Neov]]></description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[유흥 해결 방법 총정리 — 전문가가 알려주는 5가지 팁]]></title>
+      <link>https://cosmos0111-cmyk.github.io/bp-osaka-remodel/posts/guide-002-17nqs8z.html</link>
+      <guid isPermaLink="true">https://cosmos0111-cmyk.github.io/bp-osaka-remodel/posts/guide-002-17nqs8z.html</guid>
+      <description><![CDATA[### 구체적 니치 콘텐츠 작성 #### 주제Cloudflare의 cache reserve가 특정 엣지 로케이션에서 최대 47분까지 무효화가 지연되는 현상 #### 맥락클라우드/인프라 엣지케이스 / Lightsail CPU 크레딧 #### 구체성 원칙- 버전명·모델명·]]></description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Cloudflare 캐시 보존: 47분 지연, S3 버저닝 폭탄 맞은 DevOps의 눈물]]></title>
+      <link>https://cosmos0111-cmyk.github.io/bp-osaka-remodel/posts/review-001.html</link>
+      <guid isPermaLink="true">https://cosmos0111-cmyk.github.io/bp-osaka-remodel/posts/review-001.html</guid>
+      <description><![CDATA[솔직히 말해, 47분. 이 숫자가 제 머릿속을 떠나지 않습니다. Cloudflare 캐시 보존(cache reserve)이 특정 엣지 로케이션에서 최대 47분까지 무효화 지연(invalidation delay)을 일으킨다는 사실을 처음 접했을 때, 저는 제 AWS 계정]]></description>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[쿠버네티스 1.29, 그 은밀한 취약점: &quot;침묵의 패치&quot; 뒤에 숨겨진 진실]]></title>
+      <link>https://cosmos0111-cmyk.github.io/bp-osaka-remodel/posts/review-002.html</link>
+      <guid isPermaLink="true">https://cosmos0111-cmyk.github.io/bp-osaka-remodel/posts/review-002.html</guid>
+      <description><![CDATA[대부분의 사람이 릴리스 노트를 훑어보고 "아, 새로운 기능이 추가되었군" 하고 넘어갈 때, 우리는 그 이면에 숨겨진 본질을 파고들어야 한다. 특히 쿠버네티스 1.29 버전에서 발생했던 특정 CSI 드라이버 관련 볼륨 마운트 경합 버그는 겉으로 드러나지 않아 그 심각성을]]></description>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+</channel>
+</rss>
