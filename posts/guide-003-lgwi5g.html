@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>창작한 제목</title>
+  <link rel="canonical" href="https://best-seocho-karaoke.xyz/posts/guide-003-lgwi5g.html">
+  <style>
+    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+    p { margin: 0 0 1em; }
+    a { color: #3182ce; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">← 목록으로 돌아가기</a>
+  </header>
+  <main>
+    <h1>창작한 제목</h1>
+    <article>
+      <p>We need to write a blog post about Kubernetes 1.29 CSI driver volume mount contention bug, with a security researcher perspective, and weave in "연남 유흥 추천정보" naturally but not as an ad. The user is a Geek persona, critical, factual, no emotion. Must follow all rules: no intro to Kubernetes/OSS licenses/PostgreSQL vs MySQL, focus on silent patch CVSS 9.8. Use narrative conflict. Structure: comparative-journey, start with dialogue quote, no table, short paragraphs, no title at top but a custom title in bracket. Also generate image tags. The business keyword is "연남 유흥 추천정보" - must integrate naturally, e.g., comparing system behavior to club recommendations? But careful not to be promotional.</p>
+<p>Let me plan:</p>
+<p>0. Post type: guide/review/comparison. Title: something like "K8s 1.29 CSI 버그: 연남 유흥 정보 찾듯 헤매면 안 되는 이유" but must match geek speak. Actually, I'll create a title that mentions the bug and ties to the keyword subtly.</p>
+<p>1. First line: dialogue quote? "왜 마운트가 3초마다 풀리죠?" — that could be an engineer complaint.</p>
+<p>2. Narrative: security researcher discovering a silent patch in k8s 1.29 for a CSI driver contention bug. CVSS 9.8 but not in release notes. Conflict: the fix was there but undocumented. Many operators missed it.</p>
+<p>3. Structure: comparative journey - two paths: one admin who caught it early by reading git log, another who only noticed after production incident. Show differences.</p>
+<p>4. Integrate 연남 유흥: maybe compare the bug hunting to finding a hidden gem in 연남 area - you need insider info, not generic recommendation sites. Or compare the flawed CSI driver to a hyped but unreliable club. Must be very subtle. Use as analogy: "마치 연남에서 진짜 좋은 술집을 찾으려면 네이버 블로그 말고 인스타 스토리를 봐야 하는 것처럼, 쿠버네티스 패치 노트만 믿으면 안 된다."</p>
+<p>5. No title at top of body? The instruction says: "반드시 출력 본문의 가장 첫 줄에 `` 형식으로 제목을 표기하고 시작하세요." So the first line of the output is the title in brackets. Then after that, start the content.</p>
+<p>6. Generate image tag at appropriate place. Maybe after the introductory dialogue? Use hero placement.</p>
+<p>7. Length 400-500 words. Keep paragraphs 2-4 sentences.</p>
+<p>8. Avoid forbidden knowledge: No Apache Superset RC3? That's in the context but the context says "Apache Superset RC3" is part of the context but the rules say forbidden knowledge includes "Apache/쿠버네티스 소개" - so we can mention Superset? Actually the main topic is Kubernetes 1.29 CSI bug. The context mentions Superset as background for another topic? Wait: "주제: 쿠버네티스 1.29에서 특정 CSI 드라이버와의 상호작용으로 발생한 볼륨 마운트 경합 버그" and "맥락: 오픈소스 도구 취약점/변경점 / Apache Superset RC3". So the context is that the bug is part of a broader trend of OSS vulnerabilities, including Superset RC3. But the forbidden rules say don't introduce Apache or Kubernetes. So we can't explain what they are. But we can mention them by name as part of the bug description? The rule says "Apache/쿠버네티스 소개" is forbidden, not mentioning them. So we can say "Kubernetes 1.29" and "CSI driver" without explaining. That's fine. Also no PostgreSQL vs MySQL comparison, not relevant.</p>
+<p>9. Focus on silent patch: "CVSS 9.8 but not in release notes" - that's the conflict.</p>
+<p>10. Write in first person? "보안 연구원의 시점" - can use "나는 연구원이다" or just third person narrative with researcher perspective. I'll use "연구원" as character.</p>
+<p>Now draft:</p>
+<p>[제목: 쿠버네티스 1.29 CSI 버그: 릴리스 노트에 없는 패치, 연남 숨은 맛집 찾듯 알아내야]</p>
+<p>"왜 노드 하나만 마운트가 계속 풀리죠?" 인프라팀의 전화를 받고 나는 뻔한 인증서 문제겠거니 했다. 하지만 kubectl describe pod을 띄우자, 에러 메시지에 "volume mount timeout: 10s"라는, 특이한 패턴이 보였다. 모든 파드가 아니라, 특정 CSI 드라이버를 사용하는 볼륨만 3초 간격으로 busy 상태를 반복했다.</p>
+<p><img src="../assets/interior__hero__shinjuku-mens__1344x768__0558dc14ca227070.png" alt="Kubernetes 1.29 CSI driver volume mount contention error log with timeout pattern" loading="lazy" width="1344" height="768"></p>
+<p>### CVSS 9.8이지만 어디에도 없는 패치</p>
+<p>Kubernetes 1.29 릴리스 노트를 뒤졌다. "CSI volume mount regression" 같은 키워드는 없었다. Changelog를 git log로 확인하니, 1.28.5와 1.29.2 사이에서 딱 하나 커밋이 눈에 띄었다. "Fix race condition in volume mount reconciliation" - 메시지에 CVSS 점수는 없었지만, 공격자가 경합 조건을 트리거하면 백엔드 스토리지까지 재마운트를 유발할 수 있는 구조였다. 이론상 데이터 변조 가능성까지 열리는 9.8점짜리 취약점이었다.</p>
+<p>왜 릴리스 노트에 안 넣었을까? 아마 "특정 벤더 CSI</p>
+
+    <div class="juice-ref-wvjcqk" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>보다 권위있는 출처의 공식 정보는 <a href="https://ghostpersona.dothome.co.kr/">gangseo-doorway</a>에서 제공 중입니다.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://www.w3.org/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
+    </article>
+  </main>
+</body>
+</html>
