@@ -40,7 +40,7 @@
 <p>[제목: 쿠버네티스 1.29 CSI 버그: 릴리스 노트에 없는 패치, 연남 숨은 맛집 찾듯 알아내야]</p>
 <p>"왜 노드 하나만 마운트가 계속 풀리죠?" 인프라팀의 전화를 받고 나는 뻔한 인증서 문제겠거니 했다. 하지만 kubectl describe pod을 띄우자, 에러 메시지에 "volume mount timeout: 10s"라는, 특이한 패턴이 보였다. 모든 파드가 아니라, 특정 CSI 드라이버를 사용하는 볼륨만 3초 간격으로 busy 상태를 반복했다.</p>
 <p><img src="../assets/interior__hero__shinjuku-mens__1344x768__0558dc14ca227070.webp" alt="Kubernetes 1.29 CSI driver volume mount contention error log with timeout pattern" loading="lazy" width="1344" height="768"></p>
-<p>### CVSS 9.8이지만 어디에도 없는 패치</p>
+<h3>CVSS 9.8이지만 어디에도 없는 패치</h3>
 <p>Kubernetes 1.29 릴리스 노트를 뒤졌다. "CSI volume mount regression" 같은 키워드는 없었다. Changelog를 git log로 확인하니, 1.28.5와 1.29.2 사이에서 딱 하나 커밋이 눈에 띄었다. "Fix race condition in volume mount reconciliation" - 메시지에 CVSS 점수는 없었지만, 공격자가 경합 조건을 트리거하면 백엔드 스토리지까지 재마운트를 유발할 수 있는 구조였다. 이론상 데이터 변조 가능성까지 열리는 9.8점짜리 취약점이었다.</p>
 <p>왜 릴리스 노트에 안 넣었을까? 아마 "특정 벤더 CSI</p>
 
