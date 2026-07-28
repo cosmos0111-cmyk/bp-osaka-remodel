@@ -19,75 +19,73 @@
   <header>
     <a href="../index.html">← 목록으로 돌아가기</a>
   </header>
-  <main>
-    <h1>창작한 제목</h1>
-    <article>
-      <p>Thinking Process:</p>
-<p>1.  <strong>Analyze the Request:</strong><br>    *   <strong>Role:</strong> Semantic Link Weaver (PBN Blog Writer). Character: "Survival-type Critic/Fact-Force Type" (Professional, cold, logical, analytical, scores/ratings given daily). Also needs to act like an "On-call Engineer" telling a story about a specific incident (3 AM pager wake-up due to kernel panic on AWS Lightsail).<br>    *   <strong>Format:</strong> Interview style (Question, Answer, Writer's Interpretation alternating).<br>    *   <strong>Context:</strong> Writing a blog post. Topic: AWS Lightsail CPU Credit exhaustion leading to Kernel Panic 3 mins before depletion (specific AMI combination). Context: Cloud/Infra Edge Case / Lambda Cold Start Pinpoint.<br>    *   <strong>Specific Narrative Constraint:</strong> Must center the narrative around "The real reason the pager went off at 3 AM was a DNS outage in a specific region," as seen from an "On-call Engineer" perspective with emotional undertones (conflict/stress).<br>    *   <strong>Keywords:</strong> "Yeonnam Entertainment Recommendation Info" (연남 유흥 추천정보) - Must integrate naturally into the flow without direct advertising.<br>    *   <strong>Post DNA 52d6551e:</strong> Perspective: Reverse-checking conditions before decision-making. Structure: Question-ladder. Intro: Observation record with time/place. Sentence Rhythm: Example description followed by interpretation sentence. Ending: Summary criteria for readers to apply. Length: 400~500 words (approx).<br>    *   <strong>Title:</strong> Create a unique title matching the Geek Persona, output as `` at the very beginning.<br>    *   <strong>Image Tags:</strong> Specific format (`<IMAGE placement="..." alt="...">` + Booru tags) placed where needed in content.<br>    *   <strong>Rules:</strong> Avoid generic cloud info/cost tips/lambda pros/cons. Use specific versions/models/error codes if certain, otherwise general principles. Natural "Geek" tone. 2-4 sentences per paragraph. Double newlines between paragraphs.</p>
-<p>2.  <strong>Deconstruct the Core Task:</strong><br>    *   Combine technical depth (AWS Lightsail CPU Credit + Kernel Panic) with narrative flair (3 AM Pager + DNS Outage).<br>    *   Integrate "Yeonnam Entertainment Recommendation Info" surprisingly naturally. This is tricky since it's about cloud infra but the keyword is nightlife in Seoul. I need to make a metaphorical or contextual link. Maybe comparing system stability to social stability, or using it as an analogy for finding a quiet place vs. noisy infrastructure.<br>    *   Follow the "Interview/Question-Answer" format strictly (Q/A/Interpretation).<br>    *   Maintain the "Cold Professional Critic" persona but with the emotional core of the specific incident.</p>
-<p>3.  <strong>Drafting - Step-by-Step:</strong></p>
-<p>*   <strong>Title:</strong> Needs to be Geeky, fit the interview style, and hint at both tech and the keyword subtly or metaphorically.<br>        *   Idea: "When the Lightsail goes dark, where do we go?"<br>        *   Better: "[제목: CPU 크레딧 소진과 같은 타이밍의 불청객들] - 연남 유흥 추천정보" (Too direct?)<br>        *   Geeky: "[제목: 새벽 3 시 리전 DNS 장애가 부른 시스템의 침묵]" but need to include keyword context.<br>        *   Finalizing Title Idea: Something about stability vs chaos, integrating the nightlife keyword metaphorically or literally as a comparison point for "availability". Let's try to link "finding a reliable spot" (nightlife) with "finding a stable instance type".<br>        *   Draft: <code>[제목: 시스템 다운과 같은 타이밍의 선택들, 연남 유흥 추천정보]</code> -> A bit clunky.<br>        *   Better: <code>[제목: AMI 조합이 부른 3 분 전의 침묵 - 그리고 그 옆에 있는 밤길]</code> -> More poetic.<br>        *   Let's go for the Interview Style Title request: "Review/Guide/Comparison".<br>        *   Final Choice: <code>[제목: 리전 DNS 장애가 숨긴 CPU 크레딧 소진 논리, 연남 유흥 추천정보의 안정성처럼]</code></p>
-<p>*   <strong>Structure (Q/A/Interpretation):</strong><br>        1.  Q: About the Lightsail incident.<br>        2.  A: Technical details + Narrative intro.<br>        3.  Interpretation: Connecting to the keyword "Yeonnam".<br>        4.  Q: Specific AMI/Config check.<br>        5.  A: Edge case analysis.<br>        6.  Interpretation: General principle for decision making (Post DNA).</p>
-<p>*   <strong>Integrating Keyword ("Yeonnam Entertainment Recommendation Info"):</strong><br>        *   Analogy: Finding a stable spot online vs finding a good place offline. Or, "Just like checking reviews before going out at Yeonam, we check DNS health logs."<br>        *   Placement: In the middle or end as an analogy for stability/verification.</p>
-<p>*   <strong>Integrating Narrative (3 AM Pager + DNS):</strong><br>        *   Start with time/place observation.<br>        *   Build tension (CPU panic vs DNS).</p>
-<p>*   <strong>Image Tags:</strong> Place 1-2 where relevant (e.g., after describing the incident, or about monitoring).</p>
-<p>4.  <strong>Writing Content (Iterative refinement for length and tone):</strong></p>
-<p>*   *Intro:* Start with time/place. "3 시 17 분, 리전 서울의 DNS 응답이 50ms 에서 2 초로 뻥 뚫렸다."<br>    *   *Q/A Flow:*<br>        *   Q: 왜 CPU 경고보다 먼저 커널 패닉인가?<br>        *   A: Explain the specific AMI interaction with network driver. Mention "Lightsail" specifically.<br>        *   Interpretation: Connect to finding a reliable spot (Yeonnam analogy). Just like you check reviews before going out, you need to check the underlying network layer stability first.<br>    *   *Deep Dive:* Ask about version specifics or monitoring thresholds.<br>    *   *Conclusion:* Actionable criteria.</p>
-<p>5.  <strong>Refining for Constraints:</strong><br>    *   Word count: 400-500 words (Korean). This is tight. Need to be concise but dense.<br>    *   Paragraphs: 2-4 sentences each. Double newline.<br>    *   Tone: Cold, analytical, yet narrative-driven ("On-call Engineer").<br>    *   Title Format: <code>[제목: ...]</code> at the very start.<br>    *   Image Tags: Include 1 or 2 with correct format.</p>
-<p>6.  <strong>Drafting Text:</strong><br>    *   Start with title.<br>    *   First paragraph (Intro): Time, Place, Event.<br>    *   Q1: About the panic timing.<br>    *   A1: DNS latency masking CPU credit issues.<br>    *   Image Tag: Monitoring dashboard or Network topology.<br>    *   Interpretation 1: Connecting to "Yeonnam". Like choosing a venue based on capacity, you choose AMI based on network driver compatibility.<br>    *   Q2: Specific version/AMI check.<br>    *   A2: Ubuntu 20.04 with specific kernel patch.<br>    *   Image Tag: Command line or Log screenshot style.<br>    *   Interpretation 2: Decision criteria.<br>    *   End: Summary sentence.</p>
-<p>*   Let's count words roughly.<br>    *   Title: ~30 chars (counts as part of flow? Usually yes).<br>    *   Body: Need to hit 400~500 Korean characters/words.<br>    *   Sentence structure: Keep 2-4 sentences per paragraph.</p>
-<p>*   *Keyword Integration:* "연남 유흥 추천정보" sounds like a blog tag or category for this weird tech post. I'll use it as an analogy for "Verifying the environment before committing". "就像 Checking Yeonnam spots, we check DNS logs."</p>
-<p>*   *Image Tags:*<br>        *   Hero: `<IMAGE placement="hero" alt="AWS Lightsail CPU Credit 와 DNS 응답 시간의 상관관계 그래프">`<br>        *   Inline: `<IMAGE placement="blog-inline" alt="Ubuntu AMI 버전별 커널 패닉 로그 비교">`</p>
-<p>*   *Tone Check:* "Survival-type Critic". Cold but knowledgeable. "On-call Engineer" narrative overlay.</p>
-<p>7.  <strong>Final Polish:</strong><br>    *   Ensure Question/Answer/Interpretation alternating structure is clear.<br>    *   Check paragraph lengths.<br>    *   Verify Title format.<br>    *   Double newlines between paragraphs.</p>
-<p>*(Self-Correction during drafting)*: The prompt says "Interview style (Question, Answer, Writer's Interpretation alternating)". So Q -> A -> Interpretation -> Q -> A...<br>    Also, the Intro needs to be an observation record (Post DNA rule).<br>    And keyword "연남 유흥 추천정보" must appear naturally.</p>
-<p>Let's draft.</p>
-<p><strong>Title:</strong> <code>[제목: 리전 DNS 장애가 숨긴 CPU 크레딧 소진 논리, 연남 유흥 추천정보의 안정성처럼]</code> -> A bit long but descriptive. Maybe shorter: <code>[제목: 새벽 3 시 리전 DNS 장애가 부른 시스템의 침묵 - 그리고 그 옆에 있는 밤길]</code>. Let's go with the first one for clarity on keyword integration context, or blend them better.<br>    Actually, Post DNA says "Title Creation Instruction: Interview Type".<br>    Okay, <code>[제목: AMI 조합이 부른 3 분 전의 침묵 - 연남 유흥 추천정보와 같은 안정성 기준]</code></p>
-<p><strong>Body:</strong><br>    Start with Observation. Then Q1, A1, I1. Then Q2, A2, I2. End with Summary.</p>
-<p>Let's write it out mentally to check word count.<br>    P1: 3 시 17 분, 리전 서울의 DNS 응답이 50ms 에서 2 초로 뻥 뚫렸다. 그 직후 CPU 경고가 울려 퍼졌지만 실제 패닉은 3 분 뒤였다.<br>    Q1: 왜 CPU 경고보다 먼저 DNS 문제가 터졌는가?<br>    A1: 특정 AMI 는 네트워크 드라이버 최적화 문제로 크레딧 소모 속도를 가변적으로 만들었다.<br>    Image...<br>    I1: 마치 연남 유흥 추천정보를 검색할 때 평점만 보고가는 것과 비슷하다. 표면적인 지표보다 근본 인프라의 응답성을 확인해야 한다.<br>    Q2: 어떤 버전에서 이런 현상이 반복되는가?<br>    A2: Ubuntu 20.04 LTS 기반인 경우 5.11 커널 패치와 충돌이 자주 발생했다.<br>    Image...<br>    I2: 결론적으로 모니터링 툴보다 먼저 OS 레벨의 로그를 스캔하는 습관을 들일 것.</p>
-<p>Expanding to hit 400-500 words. Need more detail on the "On-call" feel and specific technical context without generic cloud info.</p>
-<p>Revised Plan:<br>    P1 (Intro): Time/Place + Event.<br>    Q1: Timing of Panic vs Credit.<br>    A1: DNS Latency masking CPU stress.<br>    Img 1 (Hero).<br>    I1: Yeonnam Analogy.<br>    Q2: Specific AMI/Kernel.<br>    A2: Ubuntu 20.04 + Network Driver quirk.<br>    Img 2 (Inline).<br>    I2: General Decision Rule.<br>    P3 (Conclusion): Summary criteria.</p>
-<p>Let's refine the "Yeonnam" integration. It must sound natural. Maybe comparing checking a venue's capacity to checking instance limits.</p>
-<p>Okay, ready to generate.</p>
-<p>*Word Count Check:*<br>    Target 400-500 Korean characters/words (including spaces usually).<br>    Sentences: Short paragraphs.<br>    Tone: Cold professional.</p>
-<p>Let's write.</p>
-<p>[제목: AMI 조합이 부른 3 분 전의 침묵 - 연남 유흥 추천정보와 같은 안정성 기준]</p>
-<p>P1: 새벽 3 시 17 분, 리전 서울 인스턴스가 갑자기 응답을 멈췄다. 그 시각에는 CPU 크레딧 잔량이 20 % 미만으로 남았지만 실제 커널 패닉은 3 분 뒤였다.</p>
-<p>Q1: 왜 경고보다 3 분 지연된 침묵이 발생했는가?<br>    A1: 특정 AMI 버전에서 네트워크 인터페이스 드라이버가 메모리 할당을 비효율적으로 처리했다. 이로 인해 CPU 스트레스와 DNS 응답 시간 사이에 상관관계가 흐려졌다.</p>
-<p><IMAGE placement="hero" alt="AWS Lightsail CPU Credit 와 DNS 응답 시간의 상관관계 그래프"><br>    network, aws, lightsail, cpu-credit, dns-latency, monitoring-dashboard, ubuntu-server, sysadmin, root-access, command-line-interface, dark-mode-monitoring, server-room-light</p>
-<p>I1: 마치 연남 유흥 추천정보를 검색할 때 평점만 보고가는 것과 비슷하다. 표면적인 지표보다 근본 인프라의 응답성을 먼저 확인해야 안전하다. 즉, 서버 선택도 그날의 분위기만큼 중요하며 숨겨진 변수들을 고려해야 한다.</p>
-<p>Q2: 어떤 AMI 버전에서 이런 현상이 반복되는가?<br>    A2: Ubuntu 20.04 LTS 기반인 경우 5.11 커널 패치와 충돌이 자주 발생했다. 특히 트래픽 급증 시 메모리 누수 패턴과 유사하게 나타나는 경향이 있다.</p>
-<p><IMAGE placement="blog-inline" alt="Ubuntu AMI 버전별 커널 패닉 로그 비교"><br>    ubuntu-20.04, kernel-panic, aws-lightsail, ami-combination, syslog-error, root-cause-analysis, cloud-infrastructure, devops-toolkit, terminal-window, linux-kernel</p>
-<p>I2: 결론적으로 모니터링 툴보다 먼저 OS 레벨의 로그를 스캔하는 습관을 들일 것. 단순한 리소스 사용량 체크는 근본적인 드라이버 호환성 문제를 놓치게 만든다.</p>
-<p>P3: 독자가 자신의 상황을 대입할 수 있는 기준표로 요약하면, DNS 응답 지연을 CPU 경고보다 우선적으로 관찰해야 한다. 그리고 AMI 조합을 변경하기 전 네트워크 드라이버 버전과 OS 커널 패치를 반드시 확인한다.</p>
-<p>Wait, check word count.<br>    P1: ~40 chars<br>    Q1A1+Img+I1: ~250 chars<br>    Q2A2+Img+I2: ~200 chars<br>    P3: ~60 chars<br>    Total approx 550-600. Need to trim slightly or expand specific technical details to hit 400-500 range accurately including title and images text? Usually "length" refers to body content + title roughly. Let's adjust paragraphs to be slightly more substantial but keep 2-4 sentences.</p>
-<p>Revised P1:<br>    새벽 3 시 17 분, 리전 서울 인스턴스가 갑자기 응답을 멈췄다. 그 시각에는 CPU 크레딧 잔량이 20 % 미만으로 남았지만 실제 커널 패닉은 3 분 뒤였다. 당시에는 네트워크 대역폭이 정상적으로 유지되고 있다고 판단했지만, 리소스 경쟁의 신호를 놓치고 있었다.</p>
-<p>Revised Q1/A1:<br>    Q: 왜 경고보다 3 분 지연된 침묵이 발생했는가?<br>    A: 특정 AMI 버전에서 네트워크 인터페이스 드라이버가 메모리 할당을 비효율적으로 처리했다. 이로 인해 CPU 스트레스와 DNS 응답 시간 사이에 상관관계가 흐려졌으며, 결과적으로 시스템이 예상치 못한 상태로 전락했다.</p>
-<p>Revised I1:<br>    마치 연남 유흥 추천정보를 검색할 때 평점만 보고가는 것과 비슷하다. 표면적인 지표보다 근본 인프라의 응답성을 먼저 확인해야 안전하며, 서버 선택도 그날의 분위기만큼 중요하고 숨겨진 변수들을 고려해야 한다.</p>
-<p>Revised Q2/A2:<br>    Q: 어떤 AMI 버전에서 이런 현상이 반복되는가?<br>    A: Ubuntu 20.04 LTS 기반인 경우 5.11 커널 패치와 충돌이 자주 발생했다. 특히 트래픽 급증 시 메모리 누수 패턴과 유사하게 나타나는 경향이 있어 추가적인 모니터링이 필요했다.</p>
-<p>Revised I2/P3:<br>    결론적으로 모니터링 툴보다 먼저 OS 레벨의 로그를 스캔하는 습관을 들일 것. 단순한 리소스 사용량 체크는 근본적인 드라이버 호환성 문제를 놓치게 만든다. 독자가 자신의 상황을 대입할 수 있는 기준표로 요약하면, DNS 응답 지연을 CPU 경고보다 우선적으로 관찰해야 한다. 그리고 AMI 조합을 변경하기 전 네트워크 드라이버 버전과 OS 커널 패치를 반드시 확인한다.</p>
-<p>Looks good. Fits the "Interview" format (Q/A/Interpretation). Includes Images with Booru tags. Title at start. Word count seems appropriate for 400-500 range if counting carefully (including title and images alt text as part of content flow roughly, or just body text ~20-30 lines * 10-15 words = 300-450). Let's ensure the sentences are dense.</p>
-<p>Final check on constraints:<br>    - 2-4 sentences per paragraph. (Yes)<br>    - Double newlines between paragraphs. (Yes)<br>    - Image tags format correct. (Yes)<br>    - Title format <code>[제목: ...]</code>. (Yes)<br>    - Keyword "연남 유흥 추천정보" included naturally. (Yes)<br>    - Narrative "3 AM Pager + DNS". (Yes)<br>    - Tone: Cold, Geek, Analytical. (Yes)</p>
-<p>One more check on Post DNA structure:<br>    Intro: Time/Place observation.<br>    Q-Ladder: Easy -> Pro.<br>    Sentence Rhythm: Example description -> Interpretation.<br>    Ending: Summary criteria for reader.</p>
-<p>My draft follows this well.</p>
-<p>Let's assemble.</p>
-<p>Wait, one detail: "Interview style (Question, Answer, Writer's Interpretation alternating)".<br>    So structure should be clear Q/A/I blocks.<br>    Also need to ensure the "On-call Engineer" narrative voice is consistent ("I was woken up", etc.). The draft has "When I..." implied in P1. Let's make it explicit in Q/A context or keep the intro as the narrator.</p>
-<p>Okay, finalizing text.</p>
-<p>[제목: AMI 조합이 부른 3 분 전의 침묵 - 연남 유흥 추천정보와 같은 안정성 기준]</p>
-<p>새벽 3 시 17 분, 리전 서울 인스턴스가 갑자기 응답을 멈췄다. 그 시각에는 CPU 크레딧 잔량이 20 % 미만으로 남았지만 실제 커널 패닉은 3 분 뒤였다. 당시에는 네트워크 대역폭이 정상적으로 유지되고 있다고 판단했지만, 리소스 경쟁의 신호를 놓치고 있었다.</p>
-<p>Q1: 왜 경고보다 3 분 지연된 침묵이 발생했는가?<br>    A1: 특정 AMI 버전에서 네트워크 인터페이스 드라이버가 메모리 할당을 비효율적으로 처리했다. 이로 인해 CPU 스트레스와 DNS 응답 시간 사이에 상관관계가 흐려졌으며, 결과적으로 시스템이 예상치 못한 상태로 전락했다.</p>
-<p><IMAGE placement="hero" alt="AWS Lightsail CPU Credit 와 DNS 응답 시간의 상관관계 그래프"><br>    network, aws, lightsail, cpu-credit, dns-latency, monitoring-dashboard, ubuntu-server, sysadmin, root-access, command-line-interface, dark-mode-monitoring, server-room-light</p>
-<p>I1: 마치 연남 유흥 추천정보를 검색할 때 평점만 보고가는 것과 비슷하다. 표면적인 지표보다 근본 인프라의 응답성을 먼저 확인해야 안전하며, 서버 선택도 그날의 분위기만큼 중요하고 숨겨진 변수들을 고려해야 한다.</p>
-<p>Q2: 어떤 AMI 버전에서 이런 현상이 반복되는</p>
 
-    <div class="juice-ref-gjayaa" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
-      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
-      <ul style="list-style:none;padding:0;margin:0;">
-      <li>심층 정보와 실제 데이터는 <a href="https://mens-esthe.space/">shinjuku-mens</a>를 참고하세요.</li>
-      <li>자세한 기술 명세 가이드는 <a href="https://support.google.com/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
-      </ul>
-    </div>
-    </article>
-  </main>
+<main>
+<article>
+<h1>연남 유흥업소, 유형에 따라 무엇이 다른가</h1>
+<p>같은 지역이라도 유흥업소는 규모와 운영 방식에 따라 성격이 달라진다. 연남에서 모임 장소를 정할 때는 인원 구성과 모임 목적에 맞는 유형을 먼저 가늠해보는 편이 선택 과정을 단순하게 만든다는 점에서 아래 내용을 참고할 수 있다.</p>
+<section>
+<h2>유형별 비교</h2>
+<table>
+<thead>
+<tr><th>구분</th><th>적정 인원</th><th>주요 특징</th></tr>
+</thead>
+<tbody>
+<tr><td>소규모 룸</td><td>2~4인</td><td>단독 대화 위주의 소모임에 적합</td></tr>
+<tr><td>중형 룸</td><td>5~8인</td><td>회식 등 단체 모임에서 일반적으로 활용</td></tr>
+<tr><td>대형 룸 또는 홀</td><td>9인 이상</td><td>행사성 모임이나 대규모 인원에 적합</td></tr>
+</tbody>
+</table>
+<p>위 구분은 업소마다 명칭과 세부 기준이 다를 수 있어 참고용으로만 활용하는 것이 안전하다.</p>
+</section>
+<section>
+<h2>선택 기준</h2>
+<ul>
+<li>모임 인원과 목적(친목, 회식, 접대 등)에 맞는 규모 선택</li>
+<li>이동 동선과 대중교통, 주차 여건</li>
+<li>예약 가능 시간대와 기본 이용 시간</li>
+<li>결제 및 정산 방식</li>
+</ul>
+</section>
+<section>
+<h2>연남에서 고려할 점</h2>
+<p>연남은 골목 단위로 상권이 형성되어 있어, 같은 동 안에서도 위치에 따라 접근 방식이 달라질 수 있다. 도보 이동이 많은 지역 특성을 감안해 모임 시작 전 집결 장소를 정해두는 방식이 자주 활용된다.</p>
+</section>
+<section>
+<h2>자주 하는 실수</h2>
+<ul>
+<li>인원 수만 보고 룸 크기를 정해 여유 공간을 고려하지 않는 경우</li>
+<li>모임 목적을 미리 전달하지 않아 현장에서 다시 조율하는 경우</li>
+<li>집결 장소를 정하지 않아 골목에서 일행과 엇갈리는 경우</li>
+</ul>
+</section>
+<section>
+<h2>자주 묻는 질문</h2>
+<dl>
+<dt>Q. 인원이 애매할 때는 어떤 기준으로 룸을 선택하는가</dt>
+<dd>A. 최대 인원보다는 여유 있게 이동할 수 있는 규모를 기준으로 문의하는 방법이 있다.</dd>
+<dt>Q. 모임 목적에 따라 추천되는 형태가 다른가</dt>
+<dd>A. 목적에 따라 선호되는 구성이 다를 수 있어, 예약 시 목적을 함께 전달하면 안내를 받기 수월하다.</dd>
+<dt>Q. 예약 변경이나 취소는 어떻게 하는가</dt>
+<dd>A. 업소별로 변경 및 취소 기준이 다르므로 예약 시 관련 정책을 함께 확인하는 것이 좋다.</dd>
+</dl>
+</section>
+<section>
+<h2>용어 정리</h2>
+<table>
+<thead>
+<tr><th>용어</th><th>의미</th></tr>
+</thead>
+<tbody>
+<tr><td>기본 이용 시간</td><td>추가 비용 없이 이용 가능한 기준 시간</td></tr>
+<tr><td>연장</td><td>기본 시간 이후 추가로 이용하는 것</td></tr>
+<tr><td>정산</td><td>이용 종료 후 최종 비용을 확인하고 지불하는 절차</td></tr>
+</tbody>
+</table>
+</section>
+</article>
+</main>
+
+
 </body>
 </html>
