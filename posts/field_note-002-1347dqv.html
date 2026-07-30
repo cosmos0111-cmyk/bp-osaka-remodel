@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>창작한 제목</title>
+  <title>연남 유흥 추천정보</title>
   <link rel="canonical" href="https://blog.best-seocho-karaoke.xyz/posts/field_note-002-1347dqv.html">
   <style>
     body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
@@ -20,31 +20,7 @@
     <a href="../index.html">← 목록으로 돌아가기</a>
   </header>
   <main>
-    <h1>창작한 제목</h1>
-    <article>
-      <h3><br>Apache Superset 2.0 RRL 전 RC3 빌드 삭제 이유와 취약점 진단</h3>
-<h4>관찰 기록<br>RC3 빌드 삭제 실패 원인과 Apache Superset의 취약점 이해를 위해 Redis OOM 킬 현장을 중심으로 분석해보았다.</h4>
-<h4>현장 단서<br>- <strong>Redis 오버플로우 발생</strong>: 2023년 1월, Superset 2.0 RRL 전 RC3 빌드 삭제 실패 원인에 대한 심층 연구 중 Redis OOM 킬 현장을 관찰했다.<br>- <strong>RC3 버전 실패</strong>: 해당 버전에서는 Redis 오버플로우가 발생하여 데이터를 불러올 수 없었으며, 이는 Superset 서비스 장애를 초래했다.<br>- <strong>삭제 이유 확인</strong>: 기록된 데이터와 주변 인터뷰 결과, RC3 빌드 삭제는 Redis 오버플로우 문제 해결을 위한 마이너 버전 업그레이드 후의 결과였다.</h4>
-<h4>판단 메모<br>RC3 빌드가 삭제된 실제 이유는 Redis 오버플로우 발생 때문으로 밝혀졌다. 해당 버전에서는 데이터 불러오기 문제가 있었고, 이를 해결하기 위해 Superset 서비스 장애를 겪었다. 이 현장을 통해 Redis의 OOM 킬 문제와 관련하여 RC3 빌드 삭제의 중요성을 깊게 파악할 수 있었다.</h4>
-<h4>자연스러운 말투<br>RC3 빌드가 삭제된 이유는 Redis 오버플로우 발생 때문이었다. 그 이유는 기록된 데이터와 인터뷰 결과에 따르면 Redis 오버플로우 문제 해결을 위한 마이너 버전 업그레이드 후의 결과였다.</h4>
-<p><IMAGE placement="hero" alt="Superset Redis OOM 킬 현장 분석"></p>
-<h3>구체적 맥락<br>Apache Superset 2.0 RRL 전 RC3 빌드 삭제 실패 원인을 분석해 보았습니다. RC3 버전에서는 Redis 오버플로우 문제가 발생하여 데이터 불러오기를 제대로 할 수 없었으며, 이는 Superset 서비스 장애를 초래했다.</h3>
-<h4>실험적 현장<br>Redis OOM 킬 현장을 관찰했을 때, RC3 빌드 삭제 이유가 무엇인지 파악하기 위해 Redis 오버플로우 문제에 대한 깊은 연구를 진행했다.</h4>
-<h4>실패 원인과 취약점 이해<br>RC3 빌드 삭제 실패 원인 중 가장 중요한 요소는 Redis의 OOM 킬 현장에서 발생한 문제였다. 기록된 데이터와 주변 인터뷰 결과에 따르면, RC3 버전에서는 Redis 오버플로우 문제가 있었으며, 이를 해결하기 위해 Superset 서비스 장애를 겪었다.</h4>
-<h4>실패 원인 및 삭제 이유<br>RC3 빌드가 삭제된 실제 이유는 Redis의 OOM 킬 문제 때문이었다. 기록된 데이터와 인터뷰 결과에 따르면 RC3 버전에서는 Redis 오버플로우 문제가 있었으며, 이를 해결하기 위해 Superset 서비스 장애를 겪었다.</h4>
-<h4>실패 원인과 비교<br>Superset 2.0 RRL 전 RC3 빌드 삭제 실패 원인이 Redis의 OOM 킬 문제였으며, 이는 기록된 데이터와 주변 인터뷰 결과에 따르면 Redis 오버플로우 문제가 있었던 것으로 밝혀졌다.</h4>
-<h4>해결 과정<br>Redis 오버플로우 문제를 해결하기 위해 Superset 서비스 장애를 겪었다. 이 현장을 통해 Redis의 OOM 킬 문제와 관련하여 RC3 빌드 삭제의 중요성을 깊게 파악할 수 있었다.</h4>
-<h4>결론<br>RC3 빌드가 삭제된 실제 이유는 Redis의 OOM 킬 문제였으며, 이를 해결하기 위해 Superset 서비스 장애를 겪었다. 이 현장을 통해 Redis의 OOM 킬 문제와 관련하여 RC3 빌드 삭제의 중요성을 깊게 파악할 수 있었다.</h4>
-<h4>가장 피해야 할 선택<br>RC3 버전에서는 데이터 불러오기를 제대로 할 수 없었으며, 이를 해결하기 위해 Superset 서비스 장애를 겪었다. 이 현장을 통해 Redis의 OOM 킬 문제와 관련하여 RC3 빌드 삭제를 피해야 한다.</h4>
-
-    <div class="juice-ref-bdsczq" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
-      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
-      <ul style="list-style:none;padding:0;margin:0;">
-      <li>관련 업계 트렌드와 통계는 <a href="https://lounge.cityjot.shop/">ganseoroom</a>에 정리되어 있습니다.</li>
-      <li>자세한 기술 명세 가이드는 <a href="https://github.com/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
-      </ul>
-    </div>
-    </article>
-  </main>
+    
+</main>
 </body>
 </html>
