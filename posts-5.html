@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (5/8) · osaka-remodel</title>
+  <meta name="description" content="osaka-remodel에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://blog.best-seocho-karaoke.xyz/posts-5.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* [Design System: kr-mono-chrome] - 유지 */
+ :root {
+ --bg-body: #ffffff;
+ --bg-card: #f5f5f7;
+ --text-primary: #1d1d1f;
+ --text-secondary: #86868b;
+ --text-tertiary: #d2d2d7;
+ --accent: #000000;
+ --border: #e5e5e5;
+ --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ --font-mono: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+ --spacing-unit: 24px;
+ --radius: 12px;
+ --container-width: 1200px;
+ }
+
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+ body {
+ font-family: var(--font-main);
+ background-color: var(--bg-body);
+ color: var(--text-primary);
+ line-height: 1.6;
+ font-size: 16px;
+ -webkit-font-smoothing: antialiased;
+ }
+
+ a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
+ a:hover { opacity: 0.7; }
+ ul { list-style: none; }
+
+ /* Layout */
+ .wrapper {
+ max-width: var(--container-width);
+ margin: 0 auto;
+ padding: 0 var(--spacing-unit);
+ }
+
+ /* Navigation */
+ header {
+ border-bottom: 1px solid var(--border);
+ padding: var(--spacing-unit) 0;
+ position: sticky;
+ top: 0;
+ background: rgba(255,255,255,0.9);
+ backdrop-filter: blur(10px);
+ z-index: 100;
+ }
+ .nav-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ font-family: var(--font-mono);
+ font-weight: 700;
+ font-size: 1.25rem;
+ letter-spacing: -0.5px;
+ }
+ .nav-links {
+ display: flex;
+ gap: 24px;
+ font-size: 0.875rem;
+ font-weight: 500;
+ }
+ .nav-links li a { color: var(--text-secondary); }
+ .nav-links li.active a { color: var(--accent); }
+
+ /* Hero Section */
+ .hero {
+ padding: 80px 0 60px;
+ text-align: center;
+ }
+ .hero h1 {
+ font-size: 3.5rem;
+ font-weight: 700;
+ letter-spacing: -1.5px;
+ margin-bottom: 16px;
+ line-height: 1.1;
+ }
+ .hero p {
+ font-size: 1.25rem;
+ color: var(--text-secondary);
+ max-width: 600px;
+ margin: 0 auto;
+ }
+
+ /* Grid System */
+ .section { padding: 60px 0; }
+ .grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 24px;
+ }
+
+ /* Cards */
+ .card {
+ background: var(--bg-card);
+ border-radius: var(--radius);
+ padding: 32px;
+ transition: transform 0.3s ease;
+ }
+ .card:hover { transform: translateY(-4px); }
+ .card-tag {
+ font-family: var(--font-mono);
+ font-size: 0.75rem;
+ color: var(--text-secondary);
+ margin-bottom: 12px;
+ display: block;
+ }
+ .card h3 {
+ font-size: 1.5rem;
+ margin-bottom: 12px;
+ letter-spacing: -0.5px;
+ }
+ .card p {
+ font-size: 0.95rem;
+ color: var(--text-secondary);
+ line-height: 1.7;
+ }
+ .data-point {
+ margin-top: 20px;
+ padding-top: 20px;
+ border-top: 1px solid var(--border);
+ display: flex;
+ justify-content: space-between;
+ font-family: var(--font-mono);
+ font-size: 0.875rem;
+ }
+
+ /* Content Blocks */
+ .content-block {
+ margin-bottom: 40px;
+ }
+ .content-block h2 {
+ font-size: 2rem;
+ margin-bottom: 24px;
+ letter-spacing: -1px;
+ }
+ .content-block p {
+ margin-bottom: 20px;
+ color: #333;
+ }
+
+ /* FAQ */
+ .faq-item {
+ border-bottom: 1px solid var(--border);
+ padding: 24px 0;
+ }
+ .faq-q {
+ font-weight: 600;
+ margin-bottom: 12px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .faq-a {
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ }
+
+ /* Footer */
+ footer {
+ border-top: 1px solid var(--border);
+ padding: 60px 0;
+ margin-top: 60px;
+ text-align: center;
+ }
+ .footer-meta {
+ font-family: var(--font-mono);
+ font-size: 0.75rem;
+ color: var(--text-secondary);
+ margin-bottom: 16px;
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+ .hero h1 { font-size: 2.5rem; }
+ .nav-links { display: none; } /* Simplified mobile handling */
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (5/8) · osaka-remodel">
+  <meta property="og:description" content="osaka-remodel에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://blog.best-seocho-karaoke.xyz/posts-5.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="wrapper nav-inner">
+ <a href="#" class="logo">OSAKA</a>
+ <ul class="nav-links">
+ <li><a href="#">홈</a></li>
+ <li class="active"><a href="#">정보</a></li>
+ <li><a href="#">리모델링</a></li>
+ <li><a href="#">컨택</a></li>
+ </ul>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 154개 · 5/8 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260727-0042.html">연남 유흥 추천정보 분석으로 알아보는 유흥 상권 정보</a>
+        <p class="post-item__summary">&quot;지난번에는 인터넷 추천글만 믿고 갔다가 동선이 전부 꼬여서 고생했어.&quot; 동료들과의 대화에서 나온 이 한마디는 무분별한 정보 수집이 가져오는 전형적인 실패 사례를 보여줍니다. 같은 지역이라도 골목 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260727-0043.html">연남 유흥 추천정보 관점에서 둘러본 셔츠룸 예약 비교와 동선 판단</a>
+        <p class="post-item__summary">처음에는 단순히 화려한 간판과 후기 수만 보고 약속 장소를 정했다가 실패했던 경험이 있습니다. 공간의 울림이나 분위기를 고려하지 않고 선택했던 탓에 조용히 대화를 나누기도, 유연하게 자리를 이동하기</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260727-0044.html">연남 유흥 추천정보 시선으로 살펴본 동대문 케어 동선 및 센터 선택</a>
+        <p class="post-item__summary">과거에는 무작정 위치만 가까운 곳을 선택했다가 조명과 소음 관리 문제로 전혀 휴식을 취하지 못하고 나온 적이 있었습니다. 겉보기와 달리 실제 내부 관리가 얼마나 철저하게 이루어지는지 파악하지 못한 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260727-0045.html">연남 유흥 추천정보 기준을 접목한 합정 노래방 선택 가이드</a>
+        <p class="post-item__summary">음향 시설의 상태나 방음 수준을 미리 파악하지 않고 방문했다가 답답함만 느끼고 나왔던 경험이 있습니다. 외관의 화려함만 믿고 세부적인 방음 설비나 마이크 상태를 살피지 않았던 판단 미스가 주요 원인</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260727-0046.html">연남 유흥 추천정보 관점에서 둘러보는 연남 클럽 추천정보 탐색 기준</a>
+        <p class="post-item__summary">금요일 저녁, 남들이 모두 권하는 대중적인 동선만 그대로 따라가면 과연 만족스러운 밤을 보낼 수 있을까요. 골목마다 조명이 켜지고 사람들로 붐비기 시작할 때, 대부분은 인터넷에 올라온 흔한 권유를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260727-0047.html">연남 유흥 추천정보 분석과 공덕 가라오케 추천정보 비교 가이드</a>
+        <p class="post-item__summary">첫 모임 장소를 정할 때 주변 평판만 믿고 서둘러 예약했다가 낭패를 본 경험이 있습니다. 공간의 크기와 음향 장비의 상태를 미리 점검하지 않아 일행 전체가 불편함을 겪었던 탓입니다. 그날 이후 공간</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260727-0048.html">연남 유흥 추천정보 바탕의 마포 홍대 로컬 럭셔리 밤문화 가이드 분석</a>
+        <p class="post-item__summary">고급스러운 분위기와 차별화된 서비스를 제공한다는 설명만 믿고 찾아간 곳에서 정작 답답함만 느끼고 나온 경험이 있을 것입니다. 럭셔리라는 단어가 붙어 있다고 해서 모든 방문객에게 동일한 만족을 보장하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260727-0049.html">연남 유흥 추천정보 탐색 중 겪은 착오와 마포 유흥 투명 정찰제 가격 정보 디렉토리의 필요성</a>
+        <p class="post-item__summary">&quot;그때 분명 정해진 기준이 있다고 들었는데, 막상 현장에 가보니 전혀 다른 이야기가 나와서 당황했습니다.&quot; 지난달 모임 장소를 고르며 단순한 소문만 믿고 움직였다가 낭패를 본 어느 소비자의 일갈은 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260731-0027.html">연남 유흥 추천정보 안내</a>
+        <p class="post-item__summary">연남동은 홍대 인근에 자리 잡은 지역으로, 다양한 여가 및 문화 시설이 밀집해 있어 많은 방문객이 찾는 곳입니다. 이 일대에서 유흥 관련 정보를 탐색할 때는 단순히 장소 목록을 나열하기보다, 각 업</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-18so9ki.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">Cherry MX 스위치의 작동음 차이는 재료와 제조 방법에 크게 의존한다. 이를 이해하고 로트 식별법을 활용하면, 최적화 조치로 미세한 차이를 줄일 수 있다. 하지만 가장 위험하지 않은 선택은 중</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-1apa46g.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">연남 지역에서 유흥 관련 정보를 찾을 때는 공식 커뮤니티나 검증된 플랫폼을 통해 최신 소식을 확인하는 것이 중요합니다. 불확실한 출처의 글이나 과장된 광고에 의존하면 예상치 못한 문제가 발생할 수 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-1bek47b.html">연남 유흥 볼륨 마운트 경합 버그 해결법</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-1ngh3fg.html">연남 유흥 추천정보</a>
+        <p class="post-item__summary">연남 지역은 다양한 문화 시설과 먹거리가 모여 있어 저녁 시간에도 활기찬 분위기를 자랑하며 많은 방문객이 찾는 곳입니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-1yfbeel.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">연남동은 다양한 문화 시설과 음식점이 밀집해 있어 저녁 시간대에 자연스럽게 유흥 공간이 형성됩니다. 정보를 검색할 때는 공식 관광 안내 사이트나 구청에서 제공하는 업소 등록 현황을 우선 참고하고, </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-953ue4.html">연남 유흥 추천정보</a>
+        <p class="post-item__summary">연남 지역은 다양한 문화 공간과 활기찬 야간 분위기로 유명하여 많은 이들이 찾는 명소입니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-eezh8k.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">연남 지역에서 유흥을 즐기려는 방문객은 먼저 자신의 목적과 예산을 명확히 정리하는 것이 중요합니다. 목적이 친구와의 모임인지, 비즈니스 접대인지, 혹은 혼자만의 휴식인지에 따라 적절한 분위기와 서비</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-quit47.html">연남 유흥 추천정보</a>
+        <p class="post-item__summary">연남은 홍대 인근에 자리한 젊고 활기찬 거리로, 다양한 문화와 먹거리가 공존하는 곳입니다. 이곳은 저녁이 되면 음악과 조명이 어우러져 독특한 분위기를 자아내며, 많은 사람들이 여가 시간을 보내기 위</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-tqe2fs.html">연남 유흥 추천정보</a>
+        <p class="post-item__summary">연남 지역은 홍대와 인접해 있어 젊은 층이 많이 모이는 문화 거리로 알려져 있습니다. 다양한 음식점과 카페가 밀집해 있으며, 밤이 되면 음악과 조명이 어우러져 활기찬 분위기를 자아냅니다. 이러한 특</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-16n6o8c.html">유흥 해결 방법 총정리</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-17nqs8z.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">연남 지역에서 유흥 관련 고민을 해결하기 위한 첫 번째 단계는 자신의 목적과 예산을 명확히 정리하는 것입니다. 무엇을 원하는지 구체적으로 적어두면 불필요한 방문을 줄이고 시간을 효율적으로 쓸 수 있</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <a class="pager__link" href="posts-3.html">3</a>
+      <a class="pager__link" href="posts-4.html">4</a>
+      <span class="pager__current">5</span>
+      <a class="pager__link" href="posts-6.html">6</a>
+      <a class="pager__link" href="posts-7.html">7</a>
+      <a class="pager__link" href="posts-8.html">8</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>

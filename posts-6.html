@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (6/8) · osaka-remodel</title>
+  <meta name="description" content="osaka-remodel에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://blog.best-seocho-karaoke.xyz/posts-6.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* [Design System: kr-mono-chrome] - 유지 */
+ :root {
+ --bg-body: #ffffff;
+ --bg-card: #f5f5f7;
+ --text-primary: #1d1d1f;
+ --text-secondary: #86868b;
+ --text-tertiary: #d2d2d7;
+ --accent: #000000;
+ --border: #e5e5e5;
+ --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ --font-mono: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+ --spacing-unit: 24px;
+ --radius: 12px;
+ --container-width: 1200px;
+ }
+
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+ body {
+ font-family: var(--font-main);
+ background-color: var(--bg-body);
+ color: var(--text-primary);
+ line-height: 1.6;
+ font-size: 16px;
+ -webkit-font-smoothing: antialiased;
+ }
+
+ a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
+ a:hover { opacity: 0.7; }
+ ul { list-style: none; }
+
+ /* Layout */
+ .wrapper {
+ max-width: var(--container-width);
+ margin: 0 auto;
+ padding: 0 var(--spacing-unit);
+ }
+
+ /* Navigation */
+ header {
+ border-bottom: 1px solid var(--border);
+ padding: var(--spacing-unit) 0;
+ position: sticky;
+ top: 0;
+ background: rgba(255,255,255,0.9);
+ backdrop-filter: blur(10px);
+ z-index: 100;
+ }
+ .nav-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ font-family: var(--font-mono);
+ font-weight: 700;
+ font-size: 1.25rem;
+ letter-spacing: -0.5px;
+ }
+ .nav-links {
+ display: flex;
+ gap: 24px;
+ font-size: 0.875rem;
+ font-weight: 500;
+ }
+ .nav-links li a { color: var(--text-secondary); }
+ .nav-links li.active a { color: var(--accent); }
+
+ /* Hero Section */
+ .hero {
+ padding: 80px 0 60px;
+ text-align: center;
+ }
+ .hero h1 {
+ font-size: 3.5rem;
+ font-weight: 700;
+ letter-spacing: -1.5px;
+ margin-bottom: 16px;
+ line-height: 1.1;
+ }
+ .hero p {
+ font-size: 1.25rem;
+ color: var(--text-secondary);
+ max-width: 600px;
+ margin: 0 auto;
+ }
+
+ /* Grid System */
+ .section { padding: 60px 0; }
+ .grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 24px;
+ }
+
+ /* Cards */
+ .card {
+ background: var(--bg-card);
+ border-radius: var(--radius);
+ padding: 32px;
+ transition: transform 0.3s ease;
+ }
+ .card:hover { transform: translateY(-4px); }
+ .card-tag {
+ font-family: var(--font-mono);
+ font-size: 0.75rem;
+ color: var(--text-secondary);
+ margin-bottom: 12px;
+ display: block;
+ }
+ .card h3 {
+ font-size: 1.5rem;
+ margin-bottom: 12px;
+ letter-spacing: -0.5px;
+ }
+ .card p {
+ font-size: 0.95rem;
+ color: var(--text-secondary);
+ line-height: 1.7;
+ }
+ .data-point {
+ margin-top: 20px;
+ padding-top: 20px;
+ border-top: 1px solid var(--border);
+ display: flex;
+ justify-content: space-between;
+ font-family: var(--font-mono);
+ font-size: 0.875rem;
+ }
+
+ /* Content Blocks */
+ .content-block {
+ margin-bottom: 40px;
+ }
+ .content-block h2 {
+ font-size: 2rem;
+ margin-bottom: 24px;
+ letter-spacing: -1px;
+ }
+ .content-block p {
+ margin-bottom: 20px;
+ color: #333;
+ }
+
+ /* FAQ */
+ .faq-item {
+ border-bottom: 1px solid var(--border);
+ padding: 24px 0;
+ }
+ .faq-q {
+ font-weight: 600;
+ margin-bottom: 12px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .faq-a {
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ }
+
+ /* Footer */
+ footer {
+ border-top: 1px solid var(--border);
+ padding: 60px 0;
+ margin-top: 60px;
+ text-align: center;
+ }
+ .footer-meta {
+ font-family: var(--font-mono);
+ font-size: 0.75rem;
+ color: var(--text-secondary);
+ margin-bottom: 16px;
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+ .hero h1 { font-size: 2.5rem; }
+ .nav-links { display: none; } /* Simplified mobile handling */
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (6/8) · osaka-remodel">
+  <meta property="og:description" content="osaka-remodel에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://blog.best-seocho-karaoke.xyz/posts-6.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="wrapper nav-inner">
+ <a href="#" class="logo">OSAKA</a>
+ <ul class="nav-links">
+ <li><a href="#">홈</a></li>
+ <li class="active"><a href="#">정보</a></li>
+ <li><a href="#">리모델링</a></li>
+ <li><a href="#">컨택</a></li>
+ </ul>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 154개 · 6/8 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-1m137cq.html">연남 유흥 추천정보</a>
+        <p class="post-item__summary">연남 지역은 문화 예술 공간과 다양한 먹거리가 어우러져 있어 많은 사람들이 찾는 명소입니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-56r3ea.html">유흥 해결 방법 총정리</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-8dmhfz.html">연남 유흥 추천정보</a>
+        <p class="post-item__summary">연남 지역은 다양한 문화와 먹거리가 어우러진 곳으로, 저녁 시간에도 활기찬 분위기를 느낄 수 있으며, 거리마다 특색 있는 간판과 조명이 방문객을 맞이합니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-d4ywpi.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">연남 지역에서 유흥 시설을 이용하려면 먼저 안전과 위생을 최우선으로 고려해야 합니다. 이용 전에는 해당 업소의 청결 상태와 방역 수칙 준수 여부를 확인하는 것이 중요합니다. 또한 주변 환경과 소음 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-y013p6.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">연남 지역에서 유흥 관련 고민을 겪는 분들이 가장 먼저 확인해야 할 것은 신뢰할 수 있는 정보 출처를 확보하는 일입니다. 공식 커뮤니티나 검증된 리뷰 플랫폼을 활용하면 허위 광고나 과장된 홍보를 걸</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-zav762.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">연남 지역은 다양한 문화 공간이 모여 있어 저녁 시간대에 많은 사람들이 찾는 곳으로, 여러 종류의 유흥 시설이 밀집해 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-zn79sj.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">연남 지역에서 유흥 관련 정보를 찾을 때는 공식 커뮤니티나 검증된 리뷰 사이트를 우선적으로 활용하는 것이 좋습니다. 불확실한 출처의 광고나 개인 블로그만 믿고 방문하면 예상치 못한 문제가 발생할 수</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-003-k4idkj.html">홍대 상권 해부노트</a>
+        <p class="post-item__summary">같은 해, 같은 골목에서 권리금 2억을 챙기고 나간 셔츠룸이 있다. 같은 골목에서 3년 계약을 연장한 곳도 있다. 2023년 홍대 인근에서 이토록 결과가 갈린 이유, 임대차 계약 관점에서 뜯어보자.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-003-lgwi5g.html">연남 유흥 추천정보</a>
+        <p class="post-item__summary">연남동은 과거의 정취와 현대적인 감각이 조화롭게 어우러진 지역으로, 밤이 되면 특유의 활기찬 분위기가 살아납니다. 이곳은 단순히 식사만 하고 돌아가는 곳이 아니라, 해가 진 뒤에도 즐길 거리가 풍부</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-190obey.html">연남에서 실패 없는 하이볼 바를 찾는 법</a>
+        <p class="post-item__summary">연남의 밤은 조악한 간판을 내건 가게들이 쏟아내는 소음으로 가득하다. 기성품 위스키에 저가 탄산수를 섞어놓고 하이볼이라는 이름을 붙여 팔아대는 업소가 태반이다. 이런 곳에서 돈과 시간을 낭비하는 일</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-1bwnndn.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">##### 실패 원인백라이트 블리드 패턴은 여러 이유에서 발생할 수 있습니다. 첫째, 배치 불일치로 인한 LED 패널 내부 결함이 가장 일반적입니다. 둘째, 제조사의 공정 관리 미숙으로도 발생할 수</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-i878zx.html">Llama 3.1 8B 의 RoPE theta 를 500 만으로 밀었을 때, 연남 유흥 추천정보 만큼의 변수가 숨어있다</a>
+        <p class="post-item__summary">Llama 3.1 8B 의 RoPE theta 를 50 만에서 5000 만으로 올렸을 때 Perplexity 는 오르기보다 미세하게 안정화되었다. 프로덕션 배포 후 세 달이 지나서야 비로소 이 si</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-001-tc6ov8.html">연남 유흥업소, 유형에 따라 무엇이 다른가</a>
+        <p class="post-item__summary">같은 지역이라도 유흥업소는 규모와 운영 방식에 따라 성격이 달라진다. 연남에서 모임 장소를 정할 때는 인원 구성과 모임 목적에 맞는 유형을 먼저 가늠해보는 편이 선택 과정을 단순하게 만든다는 점에서</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-1trwn5r.html">술값 10만 원짜리 소주 한 잔의 원가가 900원이었던 밤, 나는 계산기를 두드렸다</a>
+        <p class="post-item__summary">소주 한 잔에 10만 원. 이 가격을 보고 &quot;비싸다&quot;고 느끼는 순간, 이미 업소 사장은 당신을 놓쳤다. 왜냐하면 그 10만 원 중 소주 원가는 900원 정도이기 때문이다. 남은 돈은 다 어디로 가느</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-1jy4k8h.html">연남 유흥 추천정보에 대한 통념과 실제 차이를 검토했다</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-1totn9p.html">연남의 밤은 왜 그렇게 획일화되는가</a>
+        <p class="post-item__summary">연남동 일대에서 술잔을 기울이는 장소들을 살펴보면 하나같이 복제된 듯한 풍경을 마주하게 된다. 다들 인스타그램 사진 한 장에 매몰되어 인테리어에만 과도한 예산을 쏟아붓고, 정작 유흥의 본질인 접객의</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-142rtbp.html">연남 유흥 추천정보 관련 질문을 상황별로 정리해봤다</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-1ndntoe.html">유니콘 꿈 한 장면에 인생이 바뀐 편집자, 그리고 연남동 골목의 교훈</a>
+        <p class="post-item__summary">ricks Deckard의 유니콘 꿈 시퀀스가 원래 포함되어 있지 않았다는 사실, 아는 사람은 이미 알고 있을 거다. 그런데 이 장면이 왜 들어갔고, 왜 리들리 스콧이 인터뷰에서 번복을 반복했는지까</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-1r9egnb.html">연남 유흥 추천정보 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">연남 지역에는 라이브 음악 바, 칵테일 바, 댄스 클럽, 라운지 바 등 다양한 유흥 시설이 모여 있습니다. 각 업소는 분위기, 음악 장르, 주류 메뉴 등에 따라 특색이 다르므로 방문 목적에 맞춰 유</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-j8mngx.html">연남 유흥 추천정보 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">연남 지역에서 유흥 업소를 찾으려는 분들이 가장 먼저 궁금해하는 것은 어떤 기준으로 업소를 선택해야 하는지입니다. 일반적으로 위치 접근성, 영업 시간, 분위기, 그리고 이용 후기 등을 종합적으로 고</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <a class="pager__link" href="posts-3.html">3</a>
+      <a class="pager__link" href="posts-4.html">4</a>
+      <a class="pager__link" href="posts-5.html">5</a>
+      <span class="pager__current">6</span>
+      <a class="pager__link" href="posts-7.html">7</a>
+      <a class="pager__link" href="posts-8.html">8</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>

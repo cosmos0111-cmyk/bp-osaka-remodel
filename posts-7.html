@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (7/8) · osaka-remodel</title>
+  <meta name="description" content="osaka-remodel에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://blog.best-seocho-karaoke.xyz/posts-7.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* [Design System: kr-mono-chrome] - 유지 */
+ :root {
+ --bg-body: #ffffff;
+ --bg-card: #f5f5f7;
+ --text-primary: #1d1d1f;
+ --text-secondary: #86868b;
+ --text-tertiary: #d2d2d7;
+ --accent: #000000;
+ --border: #e5e5e5;
+ --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ --font-mono: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+ --spacing-unit: 24px;
+ --radius: 12px;
+ --container-width: 1200px;
+ }
+
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+ body {
+ font-family: var(--font-main);
+ background-color: var(--bg-body);
+ color: var(--text-primary);
+ line-height: 1.6;
+ font-size: 16px;
+ -webkit-font-smoothing: antialiased;
+ }
+
+ a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
+ a:hover { opacity: 0.7; }
+ ul { list-style: none; }
+
+ /* Layout */
+ .wrapper {
+ max-width: var(--container-width);
+ margin: 0 auto;
+ padding: 0 var(--spacing-unit);
+ }
+
+ /* Navigation */
+ header {
+ border-bottom: 1px solid var(--border);
+ padding: var(--spacing-unit) 0;
+ position: sticky;
+ top: 0;
+ background: rgba(255,255,255,0.9);
+ backdrop-filter: blur(10px);
+ z-index: 100;
+ }
+ .nav-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ font-family: var(--font-mono);
+ font-weight: 700;
+ font-size: 1.25rem;
+ letter-spacing: -0.5px;
+ }
+ .nav-links {
+ display: flex;
+ gap: 24px;
+ font-size: 0.875rem;
+ font-weight: 500;
+ }
+ .nav-links li a { color: var(--text-secondary); }
+ .nav-links li.active a { color: var(--accent); }
+
+ /* Hero Section */
+ .hero {
+ padding: 80px 0 60px;
+ text-align: center;
+ }
+ .hero h1 {
+ font-size: 3.5rem;
+ font-weight: 700;
+ letter-spacing: -1.5px;
+ margin-bottom: 16px;
+ line-height: 1.1;
+ }
+ .hero p {
+ font-size: 1.25rem;
+ color: var(--text-secondary);
+ max-width: 600px;
+ margin: 0 auto;
+ }
+
+ /* Grid System */
+ .section { padding: 60px 0; }
+ .grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 24px;
+ }
+
+ /* Cards */
+ .card {
+ background: var(--bg-card);
+ border-radius: var(--radius);
+ padding: 32px;
+ transition: transform 0.3s ease;
+ }
+ .card:hover { transform: translateY(-4px); }
+ .card-tag {
+ font-family: var(--font-mono);
+ font-size: 0.75rem;
+ color: var(--text-secondary);
+ margin-bottom: 12px;
+ display: block;
+ }
+ .card h3 {
+ font-size: 1.5rem;
+ margin-bottom: 12px;
+ letter-spacing: -0.5px;
+ }
+ .card p {
+ font-size: 0.95rem;
+ color: var(--text-secondary);
+ line-height: 1.7;
+ }
+ .data-point {
+ margin-top: 20px;
+ padding-top: 20px;
+ border-top: 1px solid var(--border);
+ display: flex;
+ justify-content: space-between;
+ font-family: var(--font-mono);
+ font-size: 0.875rem;
+ }
+
+ /* Content Blocks */
+ .content-block {
+ margin-bottom: 40px;
+ }
+ .content-block h2 {
+ font-size: 2rem;
+ margin-bottom: 24px;
+ letter-spacing: -1px;
+ }
+ .content-block p {
+ margin-bottom: 20px;
+ color: #333;
+ }
+
+ /* FAQ */
+ .faq-item {
+ border-bottom: 1px solid var(--border);
+ padding: 24px 0;
+ }
+ .faq-q {
+ font-weight: 600;
+ margin-bottom: 12px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .faq-a {
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ }
+
+ /* Footer */
+ footer {
+ border-top: 1px solid var(--border);
+ padding: 60px 0;
+ margin-top: 60px;
+ text-align: center;
+ }
+ .footer-meta {
+ font-family: var(--font-mono);
+ font-size: 0.75rem;
+ color: var(--text-secondary);
+ margin-bottom: 16px;
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+ .hero h1 { font-size: 2.5rem; }
+ .nav-links { display: none; } /* Simplified mobile handling */
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (7/8) · osaka-remodel">
+  <meta property="og:description" content="osaka-remodel에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://blog.best-seocho-karaoke.xyz/posts-7.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="wrapper nav-inner">
+ <a href="#" class="logo">OSAKA</a>
+ <ul class="nav-links">
+ <li><a href="#">홈</a></li>
+ <li class="active"><a href="#">정보</a></li>
+ <li><a href="#">리모델링</a></li>
+ <li><a href="#">컨택</a></li>
+ </ul>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 154개 · 7/8 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-ui3e2s.html">연남동에서 흔한 칵테일 바를 찾는 당신들에게</a>
+        <p class="post-item__summary">연남동 골목을 채우는 수많은 가게 중 상호만 보고 들어가 자리에 앉는 이들이 많다. 하지만 그곳이 유흥을 위한 곳인지 아니면 단순한 감성 카페의 변주곡인지조차 구분하지 못하는 태도는 비효율적이다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-18o5xmi.html">연남 유흥 추천정보 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">연남 지역은 다양한 유흥 시설이 밀집해 있어 처음 방문하는 사람은 시설 유형과 운영 시간 그리고 위치를 먼저 파악하는 것이 중요합니다. 각 업소의 특성에 따라 음악 장르나 분위기가 다르므로 본인의 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-18w599n.html">연남 유흥에서 가장 중요한 정보를 찾는다면?</a>
+        <p class="post-item__summary">연남 유흥에서 가장 기본적인 선택부터 시작해 볼까. 예를 들어, 어떤 분위기를 원하는지에 따라 음식 종류와 메뉴, 그리고 테이블 배치 등이 다릅니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-1fl26ax.html">연남 유흥 추천정보 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">연남 지역에서 유흥 시설을 처음 찾아볼 때 가장 많이 묻는 질문은 어떤 종류의 업소가 있는지에 대한 것입니다. 일반적으로 노래방, 바, 클럽, 라운지 등 다양한 형태가 존재하며 각 업소마다 분위기와</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-1og2khq.html">연남 유흥 추천정보 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">연남 지역에서 유흥 시설을 처음 방문하려는 분들이 가장 궁금해하는 부분은 해당 업소의 영업 시작 시각과 마감 시각, 그리고 입장 시 요구되는 나이 제한이나 회원 가입 여부입니다. 보통 저녁 시간대부</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-1tfqfoz.html">연남 유흥 추천정보 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">Cherry MX 스위치 중 일부가 로트에 따라 소리가 약간 다를 수 있다는 것은 알고 있지만, 왜 이러한 미세한 차이는 발생하는지에 대한 깊은 이해는 없습니다. 특히, Cherry MX 스위치의 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-gn0yjs.html">연남 유흥 추천정보 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">연남 지역에서 유흥 업소를 처음 찾을 때 어떤 기준으로 업소를 구분해야 하는지 궁금해하는 분들이 많습니다. 일반적으로 업종별로 분위기, 이용 시간대, 서비스 종류 등을 미리 파악하면 선택이 수월해집</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-q7hivq.html">연남 유흥 추천정보</a>
+        <p class="post-item__summary">연남동은 특유의 감성적인 분위기와 다양한 즐길 거리가 공존하는 곳으로 많은 이들이 찾는 명소입니다. 이곳의 저녁은 낮과는 또 다른 매력으로 채워지며 방문객들에게 잊지 못할 시간을 선사합니다. 연남동</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-t9ey42.html">연남 유흥 추천정보 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">연남 지역에는 클럽 바 노래방 라운지 등 다양한 유흥 업종이 모여 있습니다. 각 업종마다 음악 스타일 인테리어 서비스 방식이 다르므로 방문 목적과 분위기 선호도에 맞춰 선택하는 것이 좋습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-003-1nunkjy.html">연남 유흥 추천정보</a>
+        <p class="post-item__summary">연남 지역은 다양한 유흥 시설이 밀집한 곳으로, 술집과 클럽, 노래방 등 다양한 업종이 자리 잡고 있습니다. 지역 내 유흥 문화를 살펴볼 때 방문 전에 미리 정보 파악을 해두는 것이 필요하며, 특히</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-005-1s1h5f6.html">연남 유흥 추천정보 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">연남 지역에서 유흥 시설을 처음 찾을 때 가장 많이 묻는 질문은 운영 시간이 어떻게 되는지입니다. 보통 저녁 늦게부터 새벽까지 영업하며, 요일별로 마감 시각이 다를 수 있으니 방문 전에 공식 채널이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-005-2t3w4w.html">LLaMA 3.1 8B 의 RoPE 서브베이스 조정과 실제 말맛의 차이</a>
+        <p class="post-item__summary">50만에서 5000만으로 스케일링 한 순간, 벤치마크 점수는 오작동처럼 낮아졌다. Llama-3.1-8B-Instruct 기준에서는 초기 설정값보다 파라미터가 커져서 초반 코어 응답은 매끄러워졌지만</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-13vda1b.html">연남 유흥 추천정보 솔직 후기</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-166yy9a.html">연남 유흥 추천정보 솔직 후기</a>
+        <p class="post-item__summary">연남은 홍대와 인접한 문화 거리로, 다양한 먹거리와 공연장이 밀집해 있어 젊은 층이 주로 찾는 지역입니다. 이곳은 밤에도 활기찬 분위기가 유지되며, 여러 종류의 유흥 시설이 골고루 분포하고 있어 선</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-1h396ac.html">연남 유흥 추천정보 솔직 후기</a>
+        <p class="post-item__summary">우리는 주제가 &quot;특정 IPS 패널 로트에서만 발생하는 백라이트 블리드 패턴과 제조사 무상교체 조건&quot;인데, 주어진 컨텍스트에는 &quot;연남 유흥 추천정보&quot;라는 키워드가 섞여 있다. 이것은 분명히 오류나 혼</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-1hcievx.html">연남 유흥 추천정보 솔직 후기</a>
+        <p class="post-item__summary">CPU 크레딧의 활용- AWS Lightsail은 CPU 크레딧을 활용해 비용을 절감할 수 있지만, 이 경우 3분 전까지는 CPU 크레딧이 소진되는 문제를 겪었습니다.- 시간: 2021년 6월 5일</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-1oxv267.html">연남 유흥 추천정보 솔직 후기</a>
+        <p class="post-item__summary">연남동은 홍대와 인접한 문화적 다양성이 높은 동네로, 젊은 층과 외국인 방문객이 많이 찾는 곳입니다. 골목마다 카페, 바, 라이브 공연장 등이 밀집해 있어 밤문화를 즐기기에 적합한 환경을 제공합니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-22vsmu.html">연남 유흥 추천정보</a>
+        <p class="post-item__summary">연남은 서울 마포구에 위치한 문화와 예술이 공존하는 동네로, 다양한 음식점과 카페가 밀집해 있어 저녁 시간에도 활기가 넘치며, 골목마다 독특한 분위기를 자아냅니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-495it8.html">연남 유흥 추천정보 솔직 후기</a>
+        <p class="post-item__summary">클라우드/인프라 엣지케이스 / Cloudflare 캐시 무효화 지연</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-d43l5s.html">연남 유흥 추천정보 솔직 후기</a>
+        <p class="post-item__summary">연남은 젊고 활기찬 분위기가 모여 있는 곳으로 다양한 문화 공간이 밀집해 있어 저녁 시간에도 거리가 붐비는 특징을 보입니다. 카페와 바, 공연장 등이 조화롭게 어우러져 있어 방문객이 원하는 스타일에</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <a class="pager__link" href="posts-3.html">3</a>
+      <a class="pager__link" href="posts-4.html">4</a>
+      <a class="pager__link" href="posts-5.html">5</a>
+      <a class="pager__link" href="posts-6.html">6</a>
+      <span class="pager__current">7</span>
+      <a class="pager__link" href="posts-8.html">8</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
